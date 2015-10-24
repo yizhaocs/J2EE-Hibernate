@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/test</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+
+        <!-- SQL dialect-->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+        <!-- Echo all executed SQL to stdout-->
+        <property name="show_sql">true</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- Disable the second-level cache -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+        <!-- Drop and re-create the database schema on startup-->
+        <property name="hbm2ddl.auto">create</property>
+
+        <!-- don't re-create the database schema -->
+        <!--<property name="hbm2ddl.auto">update</property>-->
+
+        <!--Names the annotted entity class-->
+        <mapping class="UserDetails"/>
+
+    </session-factory>
+</hibernate-configuration>
