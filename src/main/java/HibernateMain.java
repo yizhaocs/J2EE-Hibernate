@@ -4,9 +4,6 @@ import org.hibernate.classic.Session;
 
 import java.util.Date;
 
-/**
- * Created by YZ on 10/23/15.
- */
 public class HibernateMain {
     public static void main(String[] args) {
         /*
